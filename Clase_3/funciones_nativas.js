@@ -53,3 +53,51 @@ const contarPalabras = (palabras) => {
 }
 
 //console.log(contarPalabras('javascript'), contarPalabras('ada lovelace'), contarPalabras('si debuggear es el proceso de remover bugs, programar es el proceso de agregarlos'));
+
+// burlarse(str)
+
+// Crear una función burlarse que tome como argumento un string str y devuelva el mismo string con todas las vocales reemplazadas por la letra i
+
+// burlarse('programar es dificil') // 'prigimir is dificil'
+
+
+const burlarse = (palabras) => {
+    return palabras.replace(/[aeou]/g, "i");
+}
+
+// console.log(burlarse('programar es dificil'));
+
+
+// esFraccionMayorAUno(fraccion)
+
+// Crear una función esFraccionMayorAUno que tome como argumento un string fraccion (en el formato 'numerador/denominador') y devuelva true si dicha fracción es mayor a 1 o false de lo contrario
+
+// esFraccionMayorAUno('1/2') // false
+// esFraccionMayorAUno('2/2') // false
+// esFraccionMayorAUno('4/2') // true
+
+const esFraccionMayorAUno = (fraccion) => {
+    let frac = fraccion.split("/");
+    let numerador = parseInt(frac[0]);
+    let denominador = parseInt(frac[1]);
+    // console.log(numerador);
+    return numerador > denominador;
+}
+
+// console.log(esFraccionMayorAUno("3/2"));
+
+
+// capitalizar(str)
+
+// Crear una función capitalizar que tome como argumento un string str y devuelva el mismo string con la primera letra en mayúscula
+
+// capitalizar('lovelace') // 'Lovelace'
+// capitalizar('había una vez...') // 'Había una vez...'
+
+const capitalizar = (string) => {
+    let inicial = string.slice(0, 1);
+    let inicialMay = inicial.toUpperCase();
+    return string.replace(inicial, inicialMay);
+}
+
+console.log(capitalizar("hola"));
